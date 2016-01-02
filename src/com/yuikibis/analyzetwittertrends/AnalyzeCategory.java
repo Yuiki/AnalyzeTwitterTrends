@@ -15,14 +15,4 @@ public enum AnalyzeCategory {
     public String toString() {
         return category;
     }
-
-    public static String getEnumeration() {
-        String enumeration = "[";
-        for (AnalyzeCategory category : AnalyzeCategory.values()) {
-            enumeration += category.toString() + ", ";
-        }
-        enumeration = enumeration.substring(0, enumeration.length() - 2);
-        enumeration += "]";
-        return enumeration;
-    }
 }

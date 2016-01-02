@@ -3,6 +3,7 @@ package com.yuikibis.analyzetwittertrends;
 import twitter4j.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class AnalyzeTwitter {
@@ -70,7 +71,7 @@ public class AnalyzeTwitter {
         }
 
         String result = "トレンド解析\n";
-        result += "分類 " + AnalyzeCategory.getEnumeration() + "\n";
+        result += "分類 " + Arrays.asList(AnalyzeCategory.values()) + "\n";
 
         for (int i = start; i < end; i++) {
             TrendModel trend = trendModels.get(i);
