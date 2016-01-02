@@ -18,6 +18,9 @@ public class AnalyzeTwitter {
         query.setQuery(string);
         QueryResult result = twitter.search(query);
         List<Status> tweets = result.getTweets();
+        if (tweets.size() == 0) {
+            return Long.MAX_VALUE;
+        }
         Status first = tweets.get(0);
         Status last = tweets.get(tweets.size() - 1);
         return first.getCreatedAt().getTime() - last.getCreatedAt().getTime();
