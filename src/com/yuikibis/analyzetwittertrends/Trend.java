@@ -1,38 +1,38 @@
 package com.yuikibis.analyzetwittertrends;
 
-public class TrendModel {
+class Trend {
     private final String trend;
     private final int rank;
     private long score;
-    private AnalyzeCategory category;
+    private Category category;
 
-    TrendModel(String trend, int rank) {
+    Trend(String trend, int rank) {
         this.trend = trend;
         this.rank = rank;
         this.score = Integer.MAX_VALUE;
     }
 
-    public void setScore(long score) {
+    void setScore(long score) {
         this.score = score;
     }
 
-    public void setCategory(AnalyzeCategory category) {
+    void setCategory(Category category) {
         this.category = category;
     }
 
-    public String getTrend() {
+    String getTrend() {
         return trend;
     }
 
-    public int getRank() {
+    int getRank() {
         return rank;
     }
 
-    public long getScore() {
+    long getScore() {
         return score;
     }
 
-    public AnalyzeCategory getCategory() {
+    Category getCategory() {
         return category;
     }
 }

@@ -7,7 +7,7 @@ import twitter4j.TwitterStreamFactory;
 import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
 
-public enum TwitterKey {
+public enum Key {
     CONSUMER_KEY("*****"),
     CONSUMER_SECRET("*****"),
     ACCESS_TOKEN("*****"),
@@ -17,16 +17,16 @@ public enum TwitterKey {
 
     private static final Configuration configuration;
 
-    TwitterKey(String key) {
+    Key(String key) {
         this.key = key;
     }
 
     static {
         configuration = new ConfigurationBuilder()
-                .setOAuthConsumerKey(TwitterKey.CONSUMER_KEY.toString())
-                .setOAuthConsumerSecret(TwitterKey.CONSUMER_SECRET.toString())
-                .setOAuthAccessToken(TwitterKey.ACCESS_TOKEN.toString())
-                .setOAuthAccessTokenSecret(TwitterKey.ACCESS_TOKEN_SECRET.toString())
+                .setOAuthConsumerKey(Key.CONSUMER_KEY.toString())
+                .setOAuthConsumerSecret(Key.CONSUMER_SECRET.toString())
+                .setOAuthAccessToken(Key.ACCESS_TOKEN.toString())
+                .setOAuthAccessTokenSecret(Key.ACCESS_TOKEN_SECRET.toString())
                 .build();
     }
 
